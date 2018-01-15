@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<div class="full light-cyan pink centered-text">
+  <div class="four spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h1 class="wow slideInUp">{{page.heading}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-9 medium-centered columns">
+      <div class="header-quote">
+        <p>here's what I've been up to</p>
+      </div>
+    </div>
+  </div>
+  <div class="two spacing"></div>
+</div>
+
+
+<div class="full">
+
+  <div class="flex-grid">
+    {% for post in paginator.posts reversed %}
+        <div class="post alt col-6">
+                {% if post.images %}
+                  {% if post.images.size > 1 %}
+                    <a href="{{post.url}}" class='two-images'>
+                      <img src="{{site.url}}/{{post.images[0]}}" alt="post" class="left-image">
+                      <img src="{{site.url}}/{{post.images[1]}}" alt="post" class="right-image">
+                    </a>
+                  {% else %}
+                    <a href="{{post.url}}"><img src="{{site.url}}/{{post.images[0]}}" alt="post"></a>
+                  {% endif %}
+                <div class="post-content">
+                  <h3><a href="{{post.url}}">{{post.title}} </a></h3>
+                  <p class='info'>
+                    {% if post.categories != empty %}
+                      <span>
+                        {% for cat in post.categories %}
+                          <a href="#">{{cat | capitalize }}</a>
+                          {% unless forloop.last %}
+                              ,
+                          {% endunless %}
+                        {% endfor %}
+                      </span>
+                      /
+                    {% endif %}
+                    <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                  </p>
+                  <p>{{post.excerpt}}</p>
+                  <div class="spacing"></div>
+                  <p><a href="{{post.url}}" class="button tiny brown boxed">Read more</a></p>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+
+      {% if paginator %}
+      <div class="pager">
+        {% if paginator.next_page %}
+        {% if paginator.next_page == 1 %}
+        <a href="/blog" class="older">Older Entries <i class="fa fa-angle-double-right"></i></a>
+        {% else %}
+        <a href="/blog/page{{ paginator.next_page }}" class="older">Older Entries <i class="fa fa-angle-double-right"></i></a>
+        {% endif %}
+        {% else %} -->
+        <span class="older">Older Entries</span>
+        {% endif %}
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="/blog" class="newer"><i class="fa fa-angle-double-left"></i> Newer Entries</a>
+        {% else %}
+        <a href="/blog/page{{ paginator.previous_page }}" class="newer"><i class="fa fa-angle-double-left"></i>Newer Entries</a>
+        {% endif %}
+        {% else %}
+        <span class="newer">Newer Entries</span>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+</div>
