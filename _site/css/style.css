@@ -1391,12 +1391,13 @@ form.update-form input.button:hover {
 
 .flex-grid {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 }
 
 .flex-grid .col-6 {
   width: 50%;
+  max-width: 50%;
   flex: 1 0 50%;
   padding-right: 8%;
   padding-left: 8%;
