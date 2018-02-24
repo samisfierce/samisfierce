@@ -1,0 +1,136 @@
+---
+layout: default
+section_id: pages
+services:
+- title: sponsored
+  desc: instagram and blog posts
+  icon: icon-basic-bolt
+- title: takeovers
+  desc: social media takeovers
+  icon: icon-basic-laptop
+- title: photography
+  desc: photoshoots for your brand or service
+  icon: icon-basic-picture
+- title: Marketing
+  desc: data driven marketing strategies
+  icon: icon-basic-signs
+- title: reviews
+  desc: honest reviews for your brand or service
+  icon: icon-basic-book
+- title: modeling
+  desc: freelance modeling for your next campaign
+  icon: icon-basic-photo
+
+steps:
+- title: 7.6K followers
+  desc: on instagram as of Feb 24
+- title: 49K impressions
+  desc: on instagram in the past week
+- title: 12K reach
+  desc: on instagram in the past week
+- title: 59% discovery rate
+  desc: reaching new followers
+- title: 7.1% ratio
+  desc: story audience ratio
+- title: 19% engagment
+  desc: rate over the past 30 days
+---
+
+<div class="full centered-text light-cyan lamp">
+  <div class="four spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h1 class="wow slideInUp">Work With Me</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-9 medium-centered columns">
+      <div class="header-quote">
+        <p>To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.</p>
+      </div>
+    </div>
+  </div>
+  <div class="two spacing"></div>
+</div>
+<div class="full light-grey centered-text">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <img src="images/champagne-brown.png" alt="" class="wow flipInY" data-wow-duration="2s" data-wow-delay="0.1s">
+        <div class="spacing"></div>
+        <h2>hey, I'm sam!</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-10 large-centered columns">
+      <p class="big-text">
+         Hey, I’m Sam. I’m a New York based travel, fashion and lifestyle influencer. My professional experience includes working at several large advertising agencies across a variety of accounts including Carnival Cruise Corp, Discover Card, Toyota and Revlon. I recently had an affair with entrepreneurship which allowed me to become a trusted voice in the travel, tech and finance communities in NYC.
+       </p>
+       <p class="big-text">
+         These experiences have enabled me to become an effective marketing partner for brands today. My skills include: photography, writing, campaign creation and social media marketing. I love working with brands to create data-driven strategies that accomplish traffic and conversion goals.
+       </p>
+      <p class="big-text">
+         Want to see more of my work?
+       </p>
+      <div class="two spacing"></div>
+      <a href="/portfolio" class="button boxed">Click Here</a>
+    </div>
+  </div>
+</div>
+<div class="full">
+  <h2 class="centered-text">services</h2>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="services">
+        {% for service in page.services %}
+          <div class="large-4 columns">
+            <a href="#" class="icon-text">
+              <i class="{{service.icon}}"></i>
+              <h3>{{service.title}}</h3>
+              <p>{{service.desc}}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full light-grey">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h2>Stats</h2>
+        <p>it's all in the numbers</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="services">
+    {% for step in page.steps %}
+        <div class="large-4 columns">
+          <div class="process">
+            <h3><span>0{{forloop.index}}.</span>{{step.title}}</h3>
+            <p>{{step.desc}}</p>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="full centered-text">
+  <div class="two spacing"></div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Have a project in mind?</h2>
+      <div class="two spacing"></div>
+      <a href="{{site.url}}/contact.html" class="button brown boxed">Let's talk</a>
+    </div>
+  </div>
+  <div class="two spacing"></div>
+</div>

@@ -78,7 +78,7 @@
 
 .full.lamp {
   min-height: 60%;
-  background-image: url(../images/@stock/lamp.png);
+  background-image: url(../images/pinkspot.png);
   background-repeat: no-repeat;
   background-position: 80% 10%;
   background-attachment: fixed; }
@@ -1393,6 +1393,15 @@ form.update-form input.button:hover {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
+}
+.grid{
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid .col-4{
+  width:30%;
+  min-width: 30%;
 }
 
 .flex-grid .col-6 {

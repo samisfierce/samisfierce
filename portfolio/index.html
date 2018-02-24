@@ -1,0 +1,93 @@
+---
+layout: default
+section_id: portfolio
+works_left:
+- title: Feather & Noise
+  link_to: featherandnoise.html
+  image: images/portfolio/featherandnoise.jpg
+  categories: model, fashion, influencer
+- title: Astor & Tyne
+  link_to: astorandtyne.html
+  image: images/portfolio/astorandtyne.jpg
+  categories: model, fashion
+- title: Good and Clean
+  link_to: goodandclean.html
+  image: images/portfolio/goodandclean.jpg
+  categories: model
+- title: Opia Dining Bali
+  link_to: Opia.html
+  image: images/portfolio/opia.jpg
+  categories: travel, influencer
+
+works_right:
+- title: Novotel Cusco
+  link_to: novotelcusco.html
+  image: images/portfolio/novotelcusco.jpg
+  categories: travel, influencer
+- title: Rove Byron Bay
+  link_to: rovebyronbay.html
+  image: images/portfolio/rovebyronbay.jpg
+  categories: model, fashion
+- title: Ark Swimwear
+  link_to: arkswimwear.html
+  image: images/portfolio/arkswimwear.jpg
+  categories: model, influencer, swimwear
+- title: Jolyn
+  link_to: jolyn.html
+  image: images/portfolio/jolyn.jpg
+  categories: model, influencer, swimwear
+---
+
+<div class="full light-grey tree">
+  <div class="four spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h1 class="wow slideInUp">My work</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-9 medium-centered columns">
+        <div class="header-quote">
+          <p>data driven creativity</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="gallery-left-section">
+        {% for work in page.works_left %}
+          <div class="work-wrapper">
+            <a href="{{work.link_to}}" class="work">
+              <img src="{{site.url}}/{{work.image}}" alt="">
+              <div class="info">
+                <h3>{{work.title}}</h3>
+                <p>{{work.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="gallery-right-section">
+        {% for work in page.works_right %}
+          <div class="work-wrapper">
+            <a href="{{work.link_to}}" class="work">
+              <img src="{{site.url}}/{{work.image}}" alt="">
+              <div class="info">
+                <h3>{{work.title}}</h3>
+                <p>{{work.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>
