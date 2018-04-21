@@ -1,208 +1,32 @@
 ---
-layout: default
-section_id: home
-slides:
-- title: welcome to
-  text: sam <span>is</span> fierce
-  button:
-    text: about me
-    url: /about
-  bg_color: "#F7C162"
-  image: images/half-1.jpg
-- title: read my
-  text: 2017 <span>year in</span> review
-  button:
-    text: check it out
-    url: life/2018/01/13/2017-year-in-review.html
-  bg_color: "#8E99AB"
-  image: images/half-3.jpg
-- title: check out some
-  text: of my <span>favorite</span> things
-  button:
-    text: see the posts
-    url: /blog/life
-  bg_color: "#f6c418"
-  image: images/half-4.jpg
-- title: explore the
-  text: beautiful <span>temples</span> in bali
-  button:
-    text: see the list
-    url: /travel/bali/2017/12/11/bali-temples.html
-  bg_color: "#E4A48B"
-  image: images/half-5.jpg
-
-milestones:
-- title: years
-  from: 0
-  to: 27
-- title: continents
-  from: 0
-  to: 5
-- title: countries
-  from: 0
-  to: 23
-- title: cities
-  from: 0
-  to: 287
-
-clients:
-- image: images/client-1.png
-- image: images/client-2.jpg
-- image: images/client-3.jpg
-- image: images/client-4.jpg
-- image: images/client-5.jpg
-- image: images/client-6.jpg
+title: Home
 ---
+<section class="posts">
+	{% for post in paginator.posts	 %}
+	<article class="post">
+		<a class="" href="{{ post.url }}">
+			<div class="image">
+				<img src="{{ post.image }}" alt="{{ post.title }}">
+			</div>
+		</a>
+		{% include post-heading.html post=post %}
+		{{ post.excerpt }}
 
-<div class="full no-padding" style="height: 100vh;">
-  <div id="slides">
-    <div class="slides-container">
-      {% for slide in page.slides %}
-        <div class="slide">
-          <div class="slide-info">
-            <div class="one spacing"></div>
-            <p>{{ slide.title }}</p>
-            <h1>{{ slide.text }}</h1>
-            <div class="two spacing"></div>
-            <a href="{{ slide.button.url }}" class="button boxed black">{{ slide.button.text }}</a>
-          </div>
-          <div class="slide-left" style="background-color: {{ slide.bg_color }};">
-          </div>
-          <div class="slide-right" style="background: url({{ slide.image }}) center center no-repeat;background-size: cover;">
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-    <nav class="slides-navigation">
-      <a href="#" class="next"><i class="icon-arrows-slim-right"></i></a>
-      <a href="#" class="prev"><i class="icon-arrows-slim-left"></i></a>
-    </nav>
-  </div>
-</div>
-<div class="full light-grey centered-text">
-  <div class="section-title">
-    <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <img src="images/champagne-brown.png" alt="" class="wow flipInY" data-wow-duration="2s" data-wow-delay="0.1s">
-        <div class="spacing"></div>
-        <h2>hey, I'm sam!</h2>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-10 large-centered columns">
-      <p class="big-text">
-         I've done a lot of things, but I still have no idea what I'm doing. I think I'm technically a marketer, but I also had an affair with entrepreneurship. I think by now I've had like 15 quarter life crises. I'm starting to wonder if they're really crises or just part of life.
-       </p>
-      <div class="two spacing"></div>
-      <a href="/about.html" class="button boxed">read on</a>
-    </div>
-  </div>
-</div>
-<div class="full no-padding">
-  <div class="four spacing"></div>
-  <div class="spacing"></div>
-  <div class="section-title">
-    <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <h2>Recent posts</h2>
-        <p>my latest ramblings</p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <div class="gallery-left-section">
-        {% for post in site.posts limit:2 %}
-          <div class="work-wrapper">
-            {% if post.images %}
-              <a href="{{post.url}}" class="home"><img src="{{site.url}}/{{post.images[0]}}" alt="post"></a>
-              <div class="spacing"></div>
-            {% endif %}
-              <div class="info">
-                <h4>{{post.title}}</h4>
-                <p>{{ post.date | date: "%B %d, %Y" }}</p>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="large-6 columns">
-      <div class="gallery-left-section">
-        {% for post in site.posts limit:2 offset: 2 %}
-          <div class="work-wrapper">
-            {% if post.images %}
-              <a href="{{post.url}}" class="home"><img src="{{site.url}}/{{post.images[0]}}" alt="post"></a>
-              <div class="spacing"></div>
-            {% endif %}
-              <div class="info">
-                <h4>{{post.title}}</h4>
-                <p>{{ post.date | date: "%B %d, %Y" }}</p>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  <div class="spacing"></div>
-</div>
-<div class="full light-grey">
-  <div class="three spacing"></div>
-  <div class="row">
-    {% for milestone in page.milestones %}
-      <div class="large-3 columns ">
-        <div class="milestone centered-text">
-          <div class="number" style="color: #333" data-from="{{milestone.from}}" data-to="{{milestone.to}}"> </div>
-          <span>{{milestone.title}}</span>
-          <div class="spacing"></div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-  <div class="two spacing"></div>
-</div>
-<div class="full centered-text">
-  <div class="section-title">
-    <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <h2>categories</h2>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-6 columns">
-      {% for post in site.categories.travel limit:1 %}
-      <div class="work-wrapper">
-        <h3 class="centered-text"><a href="/archive/travel">Travel</a></h3>
-        {% if post.images %}
-        <a href="{{post.url}}" class="home"><img src="{{site.url}}/{{post.images[0]}}" alt="post"></a>
-        <div class="spacing"></div>
-        {% endif %}
-        <h4>{{post.title}}</h4>
-        <p class="info">
-          <span>{{ post.date | date: "%B %d, %Y" }}</span>
-        </p>
-        <p><a href="{{post.url}}" class="button boxed brown">Read more</a></p>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="large-6 columns">
-      {% for post in site.categories.life limit:1 %}
-      <div class="work-wrapper">
-          <h3 class="centered-text"><a href="/archive/life">Life</a></h3>
-        {% if post.images %}
-        <a href="{{post.url}}" class="home"><img src="{{site.url}}/{{post.images[0]}}" alt="post"></a>
-        <div class="spacing"></div>
-        {% endif %}
-        <h4>{{post.title}}</h4>
-        <p class="info">
-          <span>{{ post.date | date: "%B %d, %Y" }}</span>
-        </p>
-        <p><a href="{{post.url}}" class="button boxed brown">Read more</a></p>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
+		<p><a class="button" href="{{ post.url }}">Read more</a></p>
+	</article>
+	{% endfor %}
+
+	{% if paginator.total_pages > 1 %}
+	<div class="pagination">
+		{% if paginator.previous_page %}
+		<a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous btn">&larr; Newer posts</a>
+		{% endif %}
+
+		<span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+		{% if paginator.next_page %}
+		<a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next btn">Older posts &rarr;</a>
+		{% endif %}
+	</div>
+	{% endif %}
+</section>

@@ -3,8 +3,8 @@ layout: post
 title: My Favorite Travel Quotes
 date: 2017-12-09 06:44:03 +0800
 categories: travel life
-images:
-  - images/blogposts/20171209/favetravelquotes.jpg
+image:
+  - /images/blogposts/20171209/favetravelquotes.jpg
 excerpt:
   Because thinking of insta captions is hard.
 comments: true

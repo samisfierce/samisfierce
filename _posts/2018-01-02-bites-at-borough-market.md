@@ -2,9 +2,10 @@
 layout: post
 title: Bites at Borough Market
 date: 2018-01-02 06:47:03 +0800
-categories: travel london
-images:
-  - images/blogposts/20180102/boroughmarket.jpg
+categories: travel
+tags: london
+image:
+  - /images/blogposts/20180102/boroughmarket.jpg
 excerpt:
   These are a few of my favorite things.
 comments: true

@@ -1,19 +1,68 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 
-  {% include head.html %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
+	{% seo %}
+	{% feed_meta %}
 
-    {% include header.html %}
+	<link href="//fonts.googleapis.com/css?family=Antic+Slab|Fira+Sans" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" media="screen" href="{{ site.baseurl }}/css/screen.css">
+	{% if page.print_stylesheet %}
+	<link rel="stylesheet" media="print" href="{{ site.baseurl }}/css/print.css">
+	{% endif %}
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
 
+	{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+	<script>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', '{{ site.google_analytics_key }}', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	{% endif %}
+</head>
 
-    {{ content }}
+<body>
+	{% include navigation.html %}
 
-    {% include footer.html %}
+	<header>
 
-    <script id="dsq-count-scr" src="//samisfierce.disqus.com/count.js" async></script>
+		<a href="{{site.baseurl }}/">
+			<h1>sam is fierce</h1>
+		</a>
+		<hr>
+		<!-- <ul>
+			<a href="/blog/travel">Travel</a>
+			<span class="space"></span>
+			<a href="/blog/life">Life</a>
+				<span class="space"></span>
+			<a href="/blog/style">Style</a>
+		</ul>
+		<hr> -->
 
-  </body>
+	</header>
+
+	<div class="container main-content">
+		<section class="content">{{ content }}</section>
+		{% include sidebar.html %}
+	</div>
+
+	<footer>
+		<div class="container">
+
+			<hr>
+			<div class="small-space"></div>
+			<!-- LightWidget WIDGET -->
+			<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/bcb30c896b315554a26a29e418719662.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+			&copy; {{ site.title }} {{ site.time | date: "%Y" }}. All rights reserved.
+		</div>
+	</footer>
+
+</body>
 
 </html>

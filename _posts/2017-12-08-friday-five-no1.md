@@ -3,8 +3,8 @@ layout: post
 title: Friday Five no. 1
 date: 2017-12-08 06:47:03 +0800
 categories: life
-images:
-  - images/blogposts/20171208/friday.jpg
+image:
+  - /images/blogposts/20171208/friday.jpg
 excerpt:
   These are a few of my favorite things.
 comments: true

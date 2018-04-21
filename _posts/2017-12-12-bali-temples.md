@@ -2,9 +2,10 @@
 layout: post
 title: The Temples of Bali
 date: 2017-12-12 06:47:03 +0800
-categories: travel bali
-images:
-  - images/blogposts/20171212/temple.JPG
+categories: travel
+tags: bali indonesia
+image:
+  - /images/blogposts/20171212/temple.JPG
 excerpt:
   Bali has hundreds of breathtaking temples. Here are some of my favorites.
 comments: true

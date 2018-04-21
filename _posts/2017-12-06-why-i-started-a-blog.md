@@ -3,8 +3,8 @@ layout: post
 title: Because The World Needs Another Blogger
 date: 2017-12-06 06:47:03 +0800
 categories: life
-images:
-  - images/blogposts/20171206/whyistarted.jpg
+image:
+  - /images/blogposts/20171206/whyistarted.jpg
 excerpt:
   Hold the eye roll. I know. ANOTHER BLOGGER? Well don't worry, this isn't about you, it's about me.
 comments: true

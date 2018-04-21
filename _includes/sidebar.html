@@ -1,0 +1,66 @@
+<aside class="sidebar {% if page.push_sidebar_down %}push{% endif %}">
+	<div><a class="editor-link btn" href="cloudcannon:collections/_data/sidebar.yml" class="btn"><strong>&#9998;</strong> Edit sidebar</a></div>
+	<div class="author">
+		<p>
+			<a href="{{ site.baseurl }}/about/">
+				<img src="{{ site.baseurl }}{{ site.data.sidebar.author_image }}" alt="author" class="author">
+			</a>
+		</p>
+		<p>{{ site.data.sidebar.description_markdown | markdownify }}</p>
+	</div>
+
+	<div class="social-icons">
+		{% if site.data.sidebar.instagram && site.data.sidebar.instagram != "" %}<a target="_blank" href="https://www.instagram.com/{{ site.data.sidebar.instagram }}">{% include social-icon.html icon="Instagram" %}</a>{% endif %}
+		{% if site.data.sidebar.facebook && site.data.sidebar.facebook != "" %}<a target="_blank" href="https://facebook.com/{{ site.data.sidebar.facebook }}">{% include social-icon.html icon="Facebook" %}</a>{% endif %}
+		{% if site.data.sidebar.twitter && site.data.sidebar.twitter != "" %}<a target="_blank" href="https://twitter.com/{{ site.data.sidebar.twitter }}">{% include social-icon.html icon="Twitter" %}</a>{% endif %}
+		{% if site.data.sidebar.pinterest && site.data.sidebar.pinterest != "" %}<a target="_blank" href="https://pinterest.com/{{ site.data.sidebar.pinterest }}">{% include social-icon.html icon="Pinterest" %}</a>{% endif %}
+	</div>
+	<div class="space"></div>
+	<hr>
+	<div class="space"></div>
+
+	<!-- Begin MailChimp Signup Form -->
+	<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<div id="mc_embed_signup">
+		<form action="https://samisfierce.us17.list-manage.com/subscribe/post?u=5edf1bb495894d5e6eda4835a&amp;id=18120d9fb5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<div id="mc_embed_signup_scroll">
+				<p>Want travel inspo and all things samisfierce right to your inbox? Sign up below!</p>
+
+				<div class="mc-field-group">
+					<label for="mce-FNAME">First Name </label>
+					<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+					</label>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+				</div>
+				<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5edf1bb495894d5e6eda4835a_18120d9fb5" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+			</div>
+
+		</form>
+	</div>
+	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+	<!--End mc_embed_signup-->
+	<div class="space"></div>
+	<hr>
+	<div class="space"></div>
+	<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/599b9cbf335b52d59e3eaa1ee76569a7.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+	<div>
+		<p class="button"><a href="http://www.instagram.com/samisfierce">FOLLOW ME ON INSTAGRAM</a></p>
+	</div>
+
+</div>
+</aside>

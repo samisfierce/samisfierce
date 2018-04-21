@@ -3,8 +3,8 @@ layout: post
 title: 2018 Travel Bucketlist
 date: 2018-01-09 06:47:03 +0800
 categories: life
-images:
-  - images/blogposts/20180108/travelbucketlist.jpg
+image:
+  - /images/blogposts/20180108/travelbucketlist.jpg
 excerpt:
   2018 I'm coming for you.
 comments: true

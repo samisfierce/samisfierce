@@ -320,14 +320,24 @@ body {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0); } }
+
 /* Navigation */
+/* .header h1{
+  line-height: 1;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 18px;
+  font-family: Montserrat;
+  letter-spacing: 10px;
+} */
+
 .title-area h1 {
   line-height: 1;
   padding-left: 15px; }
   .title-area h1 a {
     color: #333;
     font-size: 18px;
-    font-family: "josefin sans";
+    font-family: "Montserrat";
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 10px; }
@@ -361,14 +371,14 @@ body {
     max-width: 100%; }
 
 .top-bar-section ul li > a {
-  font-family: "josefin sans";
+  font-family: "Montserrat";
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
 .top-bar-section li:not(.has-form).has-dropdown .dropdown a:not(.button) {
   line-height: 45px;
-  font-family: "josefin sans";
+  font-family: "Montserrat";
   text-transform: capitalize; }
 
 /* member */
@@ -775,7 +785,7 @@ nav.wrapper {
   .slide-info h1 {
     text-transform: uppercase;
     line-height: 1.2em;
-    font-family: "Chivo";
+    font-family: "Montserrat";
     font-size: 66px;
     letter-spacing: 4px;
     opacity: 0;
@@ -1304,7 +1314,7 @@ form.update-form input.button:hover {
 .modBarGraph .bars h4 {
   font-weight: normal;
   text-transform: capitalize;
-  font-family: "josefin sans";
+  font-family: "PT serif";
   margin-bottom: 10px;
   letter-spacing: 1px; }
 

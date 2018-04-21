@@ -3,8 +3,9 @@ layout: post
 title: London for the Holidays
 date: 2017-12-07 06:47:03 +0800
 categories: travel
-images:
-- images/blogposts/20171207/london.jpg
+tags: london
+image:
+- /images/blogposts/20171207/london.jpeg
 excerpt:
   Check out my list of London must-dos for when I visit for Christmas!
 comments: true

@@ -2,9 +2,10 @@
 layout: post
 title: Chasing Waterfalls in Bali
 date: 2017-12-11 06:47:03 +0800
-categories: travel bali
-images:
-  - images/blogposts/20171211/waterfall.jpg
+categories: travel
+tags: bali indonesia
+image:
+  - /images/blogposts/20171211/waterfall.jpg
 excerpt:
   Bali is more than just luxury resorts, acai bowls and infinity pools. Chasing waterfalls is one of the best ways to spend your time on this beautiful island.
 comments: true

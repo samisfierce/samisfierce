@@ -3,8 +3,8 @@ layout: post
 title: Honestly, idk what I'm doing
 date: 2018-01-24 01:47:03 +0800
 categories: life
-images:
-  - images/blogposts/20180124/chaos.jpg
+image:
+  - /images/blogposts/20180124/mt-agung-bali-samisfierce.jpg
 excerpt:
   In the midst of another quarter life crisis.
 comments: true

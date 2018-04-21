@@ -2,9 +2,10 @@
 layout: post
 title: Alaska Needs to be on Your Bucket List
 date: 2017-12-10 06:47:03 +0800
-categories: travel usa alaska
-images:
-  - images/blogposts/20171210/alaska.jpg
+categories: travel
+tags: usa alaska
+image:
+  - /images/blogposts/20171210/alaska.jpg
 excerpt:
   You need to put Alaska on your bucket list. Now.
 comments: true

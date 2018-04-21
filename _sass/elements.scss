@@ -1,0 +1,80 @@
+html , body {
+	padding: 0;
+	margin: 0;
+	line-height: 1.8em;
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	line-height: 51px;
+	font-size: 46px;
+	text-transform: uppercase;
+	margin: 0 0 23px 0;
+}
+
+h2 {
+	font-family: 'Droid Serif', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 20px;
+	line-height: 23px;
+	margin: 0 0 0px 0;
+}
+
+p {
+	font-family: 'Droid Serif', serif;
+	font-size: 15px;
+	line-height: 23px;
+	margin: 0 0 10px 0;
+}
+
+time {
+	color: $light-grey;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	padding: 80px 0 60px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+ol li + li {
+	margin: 20px 0 0 0;
+}
+
+footer {
+	color: $light-grey;
+	text-align: center;
+	padding: 20px 0;
+	font-size: .8em;
+}
+
+hr {
+	border: 0;
+	border-top: 2px solid #000;
+	margin: 0 8% 0% 8%;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.space{
+	padding: 5%;
+}
+
+.small-space{
+	padding: 1%;
+}

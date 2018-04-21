@@ -1,0 +1,17 @@
+---
+title: Blog
+image_view: true
+---
+{% if page.image_view %}
+	{% for category in site.categories %}
+		<h1>{{ category[0] }}</h1>
+		<div class="recipes">
+			{% for recipe in category[1] %}
+				<div class="recipe" style="background-image: url('{{ recipe.image }}')">
+					<a href="{{ recipe.url }}"><span>{{ recipe.title }}</span></a>
+				</div>
+        <div class="space"></div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+{% endif %}
